@@ -4,7 +4,8 @@ using System.Text;
 
 namespace HerancaExemplo.Entities
 {
-    class SavingsAccount : Account
+    //Classe selada não permite herdala 
+    sealed class SavingsAccount : Account
     {
         public double InterestRate { get; set; }
 
@@ -25,7 +26,8 @@ namespace HerancaExemplo.Entities
         }
 
         // Sobreposto com o override permitindo o withDraw no savingsAccount
-        public override void Withdraw(double amount)
+        // O Metodo não pode ser sobrescrito em uma outra subclasse porq esta sealed
+        public sealed override void Withdraw(double amount)
         {
             // reaproveita a operacao da superclasse e acrecentar outras coisas depois
             base.Withdraw(amount);
