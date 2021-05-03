@@ -23,9 +23,10 @@ namespace HerancaExemplo.Entities
             Balance = balance;
         }
 
-        public void Withdraw(double amount)
+        // Sobreposto com o metodo virtual 
+        public virtual void Withdraw(double amount)
         {
-            Balance -= amount;
+            Balance -= amount + 5.0;
         }
         public void Deposit(double amount)
         {

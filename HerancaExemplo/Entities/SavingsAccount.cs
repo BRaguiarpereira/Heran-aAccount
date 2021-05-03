@@ -23,6 +23,14 @@ namespace HerancaExemplo.Entities
         {
             Balance += Balance * InterestRate;
         }
-        
+
+        // Sobreposto com o override permitindo o withDraw no savingsAccount
+        public override void Withdraw(double amount)
+        {
+            // reaproveita a operacao da superclasse e acrecentar outras coisas depois
+            base.Withdraw(amount);
+            Balance -= 2.0 ;
+        }
+
     }
 }

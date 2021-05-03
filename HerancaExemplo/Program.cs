@@ -6,8 +6,19 @@ namespace HerancaExemplo
     {
         static void Main(string[] args)
         {
-            Account acc = new Account(1011, "Alex", 0.0);
+            Account acc = new Account(1011, "Alex", 500.00);
+            Account cacc = new SavingsAccount(1011, "Alex", 500.00,0.01,0.00);
+
+            // sacando 10.0
+
+            acc.Withdraw(10.0);
+            cacc.Withdraw(10.0);
+
+            Console.WriteLine(acc.Balance);
+            Console.WriteLine(cacc.Balance);
+
             BusinessAccount bacc = new BusinessAccount(1002, "Maria", 0.0, 500.0);
+
 
             // UPCASTING
 
