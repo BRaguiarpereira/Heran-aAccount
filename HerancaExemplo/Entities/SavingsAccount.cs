@@ -14,7 +14,7 @@ namespace HerancaExemplo.Entities
 
         }
 
-        public SavingsAccount(int number, string holder, double balance, double loanlimit,double interestRate)
+        public SavingsAccount(int number, string holder, double balance,double interestRate)
             : base(number, holder, balance)
         {
             InterestRate = interestRate;
